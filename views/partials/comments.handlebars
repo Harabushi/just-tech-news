@@ -1,0 +1,14 @@
+<div class="comments">
+  {{#each this}}
+  <section class="comment">
+    <div class="meta">
+      {{!-- this is how you comment out code --}}
+      {{!-- format_date is being brought in in server.js, and all .handlebars have access to it --}}
+      {{user.username}} on {{format_date created_at}}
+    </div>
+    <div class="text">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
