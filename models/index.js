@@ -60,4 +60,6 @@ Post.hasMany(Comment, {
   hooks: true
 });
 
+// try onDelete: 'SET NULL', will only work if allowNull: true in model
+
 module.exports = { User, Post, Vote, Comment };

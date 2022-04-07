@@ -1,5 +1,5 @@
 const { resolve } = require('path');
-const { Post, Vote } = require('../models');
+const { Post, Vote, Comment, User } = require('../models');
 
 const voteData = [
   {
@@ -34,7 +34,7 @@ const voteData = [
 
 const seedVotes = async () => {
   for await (const vote of voteData) {
-    await Post.upvote(vote, { Vote })
+    await Post.upvote(vote, { Vote, Comment, User })
   }
 };
 
